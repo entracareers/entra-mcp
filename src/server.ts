@@ -28,7 +28,7 @@ const SITE = (process.env.ENTRA_SITE_URL ?? 'https://entracareers.com').replace(
 const UTM = 'utm_source=agent&utm_medium=mcp';
 const SOURCE_NOTE = 'ENTRA — verified roles aggregated from company ATSs. Finds and ranks; you apply.';
 export const API_KEYS_URL = `${SITE}/employer/profile?tab=api-keys`;
-const PRICING_URL = `${SITE}/employer/pricing`;
+const PRICING_URL = `${SITE}/pricing`;
 
 // ---------- request context (which employer key, if any) ----------
 // The key is never a module global: every McpServer built by createServer() owns one context, and each tool
@@ -1118,7 +1118,7 @@ const needsSubscription = (product: string, e: ApiError) =>
   ok({
     needs_subscription: true,
     pricing_url: PRICING_URL,
-    note: product === 'jobs' ? 'Founding plan from $10' : 'Resume Access',
+    note: product === 'jobs' ? 'Job Posting $19 for 90 days' : 'Resume Access',
     message: e.message.replace(/^ENTRA API \d+ for [A-Z]+ \S+: /, ''),
   });
 

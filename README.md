@@ -158,7 +158,7 @@ How it behaves:
 |---|---|
 | Key invalid / revoked | `{"error":…,"code":"AUTH_ERROR","status":401,"hint":"…create a new key at …/employer/profile?tab=api-keys"}` |
 | Key lacks a scope | `{"code":"MISSING_SCOPE","scope":"jobs:write",…}` — checked locally before any request |
-| No free vacancy slot | `post_job` → `{"needs_subscription":true,"pricing_url":"https://entracareers.com/employer/pricing","note":"Founding plan from $10"}` (not an error) |
+| No free vacancy slot | `post_job` → `{"needs_subscription":true,"pricing_url":"https://entracareers.com/pricing","note":"Job Posting $19 for 90 days"}` (not an error) |
 | Resume database needs a plan | `search_candidates` / `match_candidates` → `{"needs_subscription":true,…,"note":"Resume Access"}` |
 | Rate limited | retried once, then `{"code":"API_KEY_RATE_LIMIT_EXCEEDED","status":429,…}` |
 | Validation failed | `{"status":400,"validation":[{field,message}]}` |
@@ -180,7 +180,7 @@ AI matching is live via `match_jobs` — connect your profile at [entracareers.c
 - Application status changes and invitations through API keys (today: read-only applications).
 - OAuth on the hosted endpoint, so ChatGPT / claude.ai connectors can use employer mode without a local install.
 
-Employers: [entracareers.com/employer/pricing](https://entracareers.com/employer/pricing) — Founding plan from $10.
+Employers: [entracareers.com/pricing](https://entracareers.com/pricing) — Job Posting $19 for 90 days; Hiring Autopilot from $290/role/month.
 
 ## Links
 - Developers: [entracareers.com/developers](https://entracareers.com/developers)
