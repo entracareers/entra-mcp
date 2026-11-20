@@ -4,11 +4,20 @@
   "title": "ENTRA Jobs",
   "description": "Verified AI/tech jobs from company ATSs: search, fit matching, salary stats; employer job posting",
   "websiteUrl": "https://entracareers.com/ai-agents",
+  "icons": [
+    {
+      "src": "https://entracareers.com/logo.svg",
+      "mimeType": "image/svg+xml",
+      "sizes": [
+        "any"
+      ]
+    }
+  ],
   "repository": {
-    "url": "https://github.com/dubaikseniia-wq/entra-mcp",
+    "url": "https://github.com/entracareers/entra-mcp",
     "source": "github"
   },
-  "version": "0.4.0",
+  "version": "0.4.1",
   "packages": [
     {
       "registryType": "npm",
@@ -21,7 +30,7 @@
       "environmentVariables": [
         {
           "name": "ENTRA_API_KEY",
-          "description": "Employer API key (entra_live_\u2026) from https://entracareers.com/employer/profile?tab=api-keys \u2014 enables employer tools",
+          "description": "Employer API key (entra_live_…) from https://entracareers.com/employer/profile?tab=api-keys — enables employer tools",
           "isRequired": false,
           "isSecret": true
         },
@@ -40,10 +49,10 @@
       "headers": [
         {
           "name": "Authorization",
-          "description": "Optional \u2014 employer mode. Value \"Bearer entra_live_\u2026\" with a key from https://entracareers.com/employer/profile?tab=api-keys. Omit for candidate tools.",
+          "description": "Optional — employer mode. Value \"Bearer entra_live_…\" with a key from https://entracareers.com/employer/profile?tab=api-keys. Omit for candidate tools.",
           "isRequired": false,
           "isSecret": true,
-          "placeholder": "Bearer entra_live_\u2026"
+          "placeholder": "Bearer entra_live_…"
         }
       ]
     }
